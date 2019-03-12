@@ -17,5 +17,9 @@ public class RPG {
 		c.mp = 80;
 		c.name = "盗賊";
 		c.introduce();
+
+		c.attack(a);
+		b.heal(a);
+		System.out.println(a.name +"のHPは"+ a.hp + "になりました。");;
 	}
 }
