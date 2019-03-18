@@ -1,21 +1,20 @@
 public class RPG {
 	public static void main(String[] args) {
-		Yusha a = new Yusha();
-		a.hp = 100;
-		a.mp = 80;
-		a.name = "勇者";
+		Chara a = new Chara("勇者",100,80,20);
+		Chara b = new Chara("盗賊",50,18,13);
+		Mahou x = new Mahou("魔法使い",90,100,10);
+		DragonKnight y = new DragonKnight("竜騎士",150,80,30);
+
 		a.introduce();
-
-		Mahou b = new Mahou();
-		b.hp = 90;
-		b.mp = 100;
-		b.name = "魔法使い";
 		b.introduce();
-
-		Touzoku c = new Touzoku();
-		c.hp = 90;
-		c.mp = 80;
-		c.name = "盗賊";
-		c.introduce();
+		x.introduce();
+		y.introduce();
+		b.attack(a);
+		x.hoimi(a);
+		System.out.println("（確認用）"+ a.name +"のHPは"+ a.hp + "になりました。");
+		System.out.println("（確認用）"+ x.name +"のMPは"+ x.mp + "になりました。");
+		y.attack(b);
+		System.out.println("（確認用）"+ b.name +"のHPは"+ b.hp + "になりました。");
+		b.dead();
 	}
 }
