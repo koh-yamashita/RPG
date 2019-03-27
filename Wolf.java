@@ -7,7 +7,6 @@ class Wolf extends Chara {
 	}
 	public void attack(Chara target) {
 		System.out.println(this.name + "の攻撃！");
-		int atk = 13;
 		target.damage(atk);
 	}
 }
