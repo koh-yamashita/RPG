@@ -1,8 +1,13 @@
-public class Touzoku {
-	String name;
-	int hp;
-	int mp;
-	void introduce() {
-		System.out.println("私は" + this.name + "です。HPは" + this.hp + "でMPは" + this.mp + "です。敵の持ち物を一定確率で盗みます。");
+class Touzoku extends Chara {
+	Touzoku(String name,int hp,int mp,int atk){
+		super(name,hp,mp,atk);
+	}
+	public void introduce() {
+		System.out.println("オラは" + this.name + "だす。HPは" + this.hp + "でMPは" + this.mp + "だす。");
+	}
+	public void attack(Chara target) {
+		System.out.println(this.name + "の攻撃！");
+		int atk = 13;
+		target.damage(atk);
 	}
 }
