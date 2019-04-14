@@ -1,11 +1,11 @@
 package qwerty;
-class Yusha extends Chara {
-	Yusha(String name,int hp,int mp,int atk){
+class Wolf extends Chara {
+	Wolf(String name,int hp,int mp,int atk){
 		super(name,hp,mp,atk);
 	}
 	public void introduce() {
 		if(hp<=0)return;
-		System.out.println("俺は" + this.name + "！HPは" + this.hp + "でMPは" + this.mp + "だぜ！。");
+		System.out.println("ボクは" + this.name + "だワン。HPは" + this.hp + "でMPは" + this.mp + "だワン。");
 	}
 	@Override
 	public void attack(Chara target) {
